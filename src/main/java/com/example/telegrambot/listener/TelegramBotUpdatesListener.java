@@ -31,13 +31,12 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
 
     private final NotificationService notificationService;
 
+    private final TelegramBot telegramBot;
 
-    @Autowired
-    private TelegramBot telegramBot;
-
-    public TelegramBotUpdatesListener(NotificationService notificationService, TelegramBot telegramBot) {
-        this.notificationService = notificationService;
+    public TelegramBotUpdatesListener(TelegramBot telegramBot, NotificationService notificationService) {
         this.telegramBot = telegramBot;
+        this.notificationService = notificationService;
+
     }
 
     @PostConstruct
