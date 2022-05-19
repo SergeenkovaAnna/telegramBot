@@ -8,7 +8,7 @@ import java.util.Collection;
 
 public interface NotificationTaskRepository extends JpaRepository<NotificationTask, Long> {
 
-    @Query("from NotificationTask where notificationDate = current_timestamp")
+    @Query("from NotificationTask where notificationDate < current_timestamp")
     Collection<NotificationTask> getByNotificationDate();
 
 }

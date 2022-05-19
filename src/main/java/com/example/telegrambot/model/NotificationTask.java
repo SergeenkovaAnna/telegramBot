@@ -16,6 +16,7 @@ public class NotificationTask {
     private Long id;
 
     private Long chatId;
+
     private LocalDateTime notificationDate;
     private LocalDateTime sentDate;
     private String notificationMessage;
